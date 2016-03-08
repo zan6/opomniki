@@ -1,11 +1,20 @@
 window.addEventListener('load', function() {
 	//stran nalozena
-		
+		var potrdiPrijavo = function(){
+			//TODO: 
+		   var uporabnik = document.querySelector("#uporabnisko_ime").value;
+			document.querySelector("#uporabnik").innerHTML = uporabnik;
+			//dobimo pokrivalo in ga skrijemo
+			document.querySelector(".pokrivalo").style.visibility="hidden";
+		}
+		// dobimo gumb iz opomniki.html
+		//# povemo da gre za id
+		document.querySelector("#prijavniGumb").addEventListener("click",potrdiPrijavo);
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
 		var opomniki = document.querySelectorAll(".opomnik");
 		
-		for (i = 0; i < opomniki.length; i++) {
+		for (var i = 0; i < opomniki.length; i++) {
 			var opomnik = opomniki[i];
 			var casovnik = opomnik.querySelector("span");
 			var cas = parseInt(casovnik.innerHTML);
