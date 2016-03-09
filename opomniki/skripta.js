@@ -13,7 +13,7 @@ window.addEventListener('load', function() {
 		
 		
 		//dodaj opomnik
-			var dodajOpomnik = function(event){
+	var dodajOpomnik = function(event){
 		var naziv_opomnika = document.querySelector("#naziv_opomnika").value;
 		var cas_opomnika = document.querySelector("#cas_opomnika").value;
 		document.querySelector("#naziv_opomnika").value = " ";
@@ -26,6 +26,8 @@ window.addEventListener('load', function() {
 		</div>"
 		
 			};
+			
+			document.querySelector("#dodajGumb").addEventListener('click',dodajOpomnik);
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
 		var opomniki = document.querySelectorAll(".opomnik");
